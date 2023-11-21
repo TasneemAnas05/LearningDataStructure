@@ -155,6 +155,34 @@ public class App3 {
             t2.pop();
         }
     }
+    //given a stack of even and odd numbers and you need to order the even first then the odd
+    public static <T> void EvOd(ArrayBoundedStack<Integer>s)
+    {
+                ArrayBoundedStack<Integer>t1=new ArrayBoundedStack();
+                ArrayBoundedStack<Integer>t2=new ArrayBoundedStack();
+                
+                while(!s.isEmpty()){
+                    if((s.top())%2==0){
+                        t1.push(s.top());
+                        s.pop();
+                    }
+                    else{
+                        t2.push(s.top());
+                        s.pop();
+                    }
+                }
+                while(!t1.isEmpty()){
+                    s.push(t1.top());
+                    t1.pop();
+                    System.out.println(s.top());
+                }
+                while(!t2.isEmpty()){
+                    s.push(t2.top());
+                    t2.pop();
+                    System.out.println(s.top());
+                }
+        
+    }
     public static void main(String[] args) {
         ArrayBoundedStack<Integer>s1=new ArrayBoundedStack();
         s1.push(7);
