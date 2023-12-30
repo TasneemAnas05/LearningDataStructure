@@ -34,7 +34,13 @@ public class App1 {
         System.out.println(passengerList);
 
     }
-
+    /* 
+Inside the removeDuplicatePassenger method, you call temp.contains(p) method. 
+This method call public boolean 
+contains(T element) method, which interns call find(element); 
+. This method call if (list[location].equals(target)).
+So we have make sure that Passenger have equals method.
+ */
     public static <T> ArraySortedList removeDuplicatePassenger(ArraySortedList<Passenger> list) {
         ArraySortedList<Passenger> temp = new ArraySortedList();
         Passenger p;
