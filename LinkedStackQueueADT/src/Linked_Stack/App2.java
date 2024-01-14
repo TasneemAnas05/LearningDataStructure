@@ -34,7 +34,25 @@ public class App2 {
         LinkedStack<Student> f = new LinkedStack();
         PassFaildStudents(s,p,f);
     }
-
+    public static void ReverseStack(LinkedStack<Student>s){
+        LinkedStack<Student> t1=new LinkedStack();
+        LinkedStack<Student> t2=new LinkedStack();
+        while(! s.isEmpty()){
+            Student item=s.top();
+            t1.push(item);
+            s.pop();
+        }
+        while(! t1.isEmpty()){
+            Student item=t1.top();
+            t2.push(item);
+            t1.pop();
+        }
+        while(! t2.isEmpty()){
+            Student item=t2.top();
+            s.push(item);
+            t2.pop();
+        }
+    }
     public static void PassFaildStudents(LinkedStack<Student> s,
             LinkedStack<Student> p,
             LinkedStack<Student> f) {
