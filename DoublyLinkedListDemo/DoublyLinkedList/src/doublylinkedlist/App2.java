@@ -98,7 +98,27 @@ public class App2 {
             dList = dList.getBack();
         }
     }
-
+     public static void printOddReverseEvevn(DLLNode<Integer> d){
+        System.out.println("-----------");
+        while(d.getFront() != null){
+            Integer v=d.getInfo();
+            if(v%2 != 0){
+                System.out.println(v);
+            }
+            d= d.getFront();
+        }
+        if(d.getInfo()%2 !=0)
+            System.out.println(d.getInfo());
+        System.out.println("************");
+        while(d != null){
+             Integer v=d.getInfo();
+            if(v%2 == 0){
+                System.out.println(v);
+            }
+            d= d.getBack();
+           
+        }
+    }
     public static <T> DLLNode<T> addFirst(DLLNode<T> dList, T value) {
         DLLNode<T> n = new DLLNode(value);
         if (dList != null) {
