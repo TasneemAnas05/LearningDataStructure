@@ -1,9 +1,6 @@
 package doublylinkedlist;
 
-/**
- *
- * @author Dr. Mahmood
- */
+
 public class DLLNode<T> {
 
     private DLLNode<T> back;
