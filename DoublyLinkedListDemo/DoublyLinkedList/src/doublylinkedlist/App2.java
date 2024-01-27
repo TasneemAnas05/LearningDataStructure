@@ -49,6 +49,9 @@ public class App2 {
         System.out.println("deleteAllByValue: 3");
         dList = deleteAllByValue(dList, 3);
         print(dList);
+         System.out.println("countByValue: 3");
+        System.out.println(countByValue(dList, 3));
+        print(dList);
 //        
 //        System.out.println("deleteAllByValue: 8");
 //        dList = deleteAllByValue(dList, 8);
