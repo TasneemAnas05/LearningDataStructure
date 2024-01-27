@@ -161,7 +161,25 @@ public class App2 {
         temp.getBack().setFront(null);
         return dList;
     }
-
+      public static <T> void deleteMiddle(DLLNode<T>dlist){
+        int counter=0;
+        while(dlist.getFront() != null){//to return back
+            counter++;
+            dlist=dlist.getFront();
+            
+        }
+        counter++;//to count the last node 
+        if(counter < 3 || counter %2 ==0)
+            return;
+        int middle=counter/2+1;
+        while(dlist != null){
+            if(counter-- == middle){
+                dlist.getBack().setFront(dlist.getFront());
+                dlist.getFront().setBack(dlist.getBack());
+            }
+            dlist=dlist.getBack();
+        }
+    }
     public static <T> DLLNode<T> deleteAllByValue(DLLNode<T> dList, T value) {
         if (dList == null || (dList.getInfo().equals(value) && dList.getFront() == null)) {
             return null;
