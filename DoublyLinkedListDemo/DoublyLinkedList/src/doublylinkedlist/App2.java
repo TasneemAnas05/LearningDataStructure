@@ -183,6 +183,15 @@ public class App2 {
             dlist=dlist.getBack();
         }
     }
+     public static <T> int countByValue(DLLNode<Integer> dlist , T value){
+       int counter=0;
+       while(dlist != null){
+           if(dlist.getInfo().equals(value))
+               counter++;
+           dlist=dlist.getFront();
+       }
+       return counter;
+   }
     public static <T> DLLNode<T> deleteAllByValue(DLLNode<T> dList, T value) {
         if (dList == null || (dList.getInfo().equals(value) && dList.getFront() == null)) {
             return null;
