@@ -52,6 +52,9 @@ public class App2 {
          System.out.println("countByValue: 3");
         System.out.println(countByValue(dList, 3));
         print(dList);
+         System.out.println("find: 5");
+        System.out.println(find(dList,5 ));
+        print(dList);
 //        
 //        System.out.println("deleteAllByValue: 8");
 //        dList = deleteAllByValue(dList, 8);
@@ -191,6 +194,15 @@ public class App2 {
            dlist=dlist.getFront();
        }
        return counter;
+   }
+     public static <T> boolean find(DLLNode<T> dlist , T value){
+       while(dlist != null){
+           if(dlist.getInfo().equals(value))
+               return true;
+           
+               dlist=dlist.getFront();
+       }
+       return false;
    }
     public static <T> DLLNode<T> deleteAllByValue(DLLNode<T> dList, T value) {
         if (dList == null || (dList.getInfo().equals(value) && dList.getFront() == null)) {
