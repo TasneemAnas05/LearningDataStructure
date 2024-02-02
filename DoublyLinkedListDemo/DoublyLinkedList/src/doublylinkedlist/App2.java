@@ -224,5 +224,19 @@ public class App2 {
         }
         return dList;
     }
+      public static <T> void deleteByValue(DLLNode<T> dList, T value) {
+       
+        DLLNode<T> temp = dList;
+        while (temp != null) {
+            if (temp.getInfo().equals(value)) {
+               
+                {  temp.getBack().setFront(temp.getFront());
+                  temp.getFront().setBack(temp.getBack());}
+
+
+      
+    }
+        
+}
 
 }
