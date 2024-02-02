@@ -238,5 +238,12 @@ public class App2 {
     }
         
 }
+           // to add (n) after (w)
+        /* n.setFront(w.getFront());
+          n.setBack(w);
+         w.setFront(n);
+         w.getFront().setBack(n);
+          
+        */
 
 }
